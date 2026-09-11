@@ -1,0 +1,50 @@
+public class Animal
+    {
+        public string Nome { get; set; }
+
+        public Animal(string nome)
+        {
+            Nome = nome;
+        }
+
+        public void comer()
+        {
+            Console.WriteLine($"{Nome} está comendo.");
+        }
+
+public class Cachorro : Animal
+    {
+        public Cachorro(string nome) : base(nome)
+        {
+        }
+
+        public void Latir()
+        {
+            Console.WriteLine("AU AU!");
+        }
+
+public class Gato : Animal
+    {
+        public Gato(string nome) : base(nome)
+        {
+        }
+
+        public void Miar()
+        {
+            Console.WriteLine("MIAU MIAU!");
+        }
+    }
+
+
+Cachorro cachorro = new Cachorro("Billy");
+            Gato gato = new Gato("Frederica");
+
+            Console.WriteLine($"Nome do cachorro: {cachorro.Nome}");
+            cachorro.comer();
+            cachorro.Latir();
+
+            Console.WriteLine();
+
+            Console.WriteLine($"Nome do gato: {gato.Nome}");
+            gato.comer();
+            gato.Miar();
